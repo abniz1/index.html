@@ -1,36 +1,28 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fast Redirect Page</title>
-
-  <!-- Redirect after 1 second -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      setTimeout(function() {
-        window.top.location.href = "https://example.com"; // <-- redirect link
-      }, 1000);
-    });
-  </script>
-
+  <title>Redirecting…</title>
   <style>
     body {
+      background: #fff;
       margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-    iframe {
-      width: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
-      border: none;
     }
   </style>
 </head>
 <body>
+  <h2>Redirecting… please wait</h2>
 
-  <!-- iFrame preview -->
-  <iframe src="index.html"></iframe> <!-- <-- change this -->
-
+  <script>
+    // Redirect safely after 1 second
+    setTimeout(function() {
+      window.location.href = "index.html";
+    }, 1000);
+  </script>
 </body>
 </html>
